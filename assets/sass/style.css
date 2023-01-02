@@ -1,0 +1,135 @@
+.quiz {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 97vh;
+  width: 98vw;
+  margin-top: -60px;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.choice {
+  border: 2px solid #F8991C;
+  padding: 20px;
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  background: rgba(255, 255, 255, 0.0666666667);
+  color: white;
+  border-radius: 20px;
+  height: 200px;
+  width: 200px;
+}
+.choice .active {
+  background-color: #F8991C;
+}
+.choice:hover {
+  box-shadow: black;
+  background-color: rgba(248, 153, 28, 0.49);
+}
+.choice:active {
+  background-color: #F8991C;
+}
+
+.qst {
+  border: 2px solid #F8991C;
+  padding: 20px;
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  background: rgba(255, 255, 255, 0.0666666667);
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 10px 0 #F8991C;
+}
+.qst .active {
+  background-color: #F8991C;
+}
+
+.progress {
+  background-color: #F8991C;
+  height: 0.4rem;
+  left: 30%;
+  position: absolute;
+  top: 70%;
+  transform: translateY(-50%);
+  transition: 0.4s ease;
+  width: 0;
+  z-index: -1;
+}
+
+.progressbar {
+  background-color: #F8991C;
+  height: 1.5rem;
+  position: absolute;
+  transition: 0.4s ease;
+  width: 0;
+  border-radius: 20px;
+}
+
+.step {
+  margin-top: 30px;
+  align-items: center;
+  background-color: rgb(29, 30, 32);
+  border: 3px solid #F8991C;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  height: 3rem;
+  justify-content: center;
+  transition: 0.4s ease;
+  width: 3rem;
+}
+.step.active {
+  background-color: #F8991C;
+}
+
+.btn {
+  color: #F8991C;
+  border: 2px solid #F8991C;
+  font-weight: 500;
+}
+.btn:hover {
+  background-color: #F8991C;
+  color: white;
+}
+
+.resultsExplanation {
+  height: 55vh;
+  overflow-y: scroll;
+  border: solid 3px #F8991C;
+  border-radius: 10px;
+}
+
+.welcome {
+  color: #F8991C;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffc266;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #38475e;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.home {
+  margin-top: 20%;
+}
+
+@media screen and (max-width: 600px) {
+  .home {
+    margin-top: 90%;
+  }
+}/*# sourceMappingURL=style.css.map */

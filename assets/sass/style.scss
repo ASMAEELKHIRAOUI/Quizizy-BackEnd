@@ -1,0 +1,134 @@
+$radius:20px;
+$amazon:#F8991C;
+
+@mixin choices() {
+    border: 2px solid $amazon;
+    padding: 20px;
+    backdrop-filter: blur(40px);
+    background: #fff1;
+    color: white;
+    border-radius: 20px;
+    .active{
+        background-color: $amazon;
+    }
+  }
+@mixin hover(){
+    height: 200px;
+    width: 200px;
+    &:hover{
+        box-shadow: black;
+        background-color: rgba(248, 153, 28, 0.49);
+    }
+    &:active{
+        background-color: $amazon;
+    }
+}
+
+
+.quiz{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 97vh;
+    width: 98vw;
+    margin-top: -60px;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.choice{
+    @include choices();
+    @include hover();
+}
+.qst{
+    @include choices();
+    box-shadow: 0 8px 10px 0 $amazon;
+}
+.progress {
+    background-color: $amazon;
+    height: 0.4rem;
+    left: 30%;
+    position: absolute;
+    top: 70%;
+    transform: translateY(-50%);
+    transition: 0.4s ease;
+    width: 0;
+    z-index: -1;
+}
+.progressbar {
+    background-color: $amazon;
+    height: 1.5rem;
+    // left: 10%;
+    position: absolute;
+    // top: 35%;
+    // transform: translateY(-50%);
+    transition: 0.4s ease;
+    width: 0;
+    // z-index: -1;
+    border-radius: $radius;
+}
+
+// .progresscounter{
+//     left: 0;
+// }
+.step{
+    margin-top: 30px;
+    align-items: center;
+    background-color: rgba(29, 30, 32, 1);
+    border: 3px solid $amazon;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    height: 3rem;
+    justify-content: center;
+    transition: 0.4s ease;
+    width: 3rem;
+    &.active {
+        background-color: $amazon;
+    }
+}
+.btn{
+    color: #F8991C;
+    border: 2px solid $amazon;
+    font-weight: 500;
+    &:hover{
+        background-color: $amazon;
+        color: white;
+    }
+}
+.resultsExplanation{
+    height: 55vh;
+    overflow-y: scroll;
+    border: solid 3px $amazon;
+    border-radius: 10px;
+}
+.welcome{
+    color: $amazon;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #ffc266;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #38475e;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+.home{
+    margin-top: 20%;
+}
+@media screen and (max-width: 600px) {
+    .home{
+        margin-top: 90%;
+    }
+}
