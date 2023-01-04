@@ -126,8 +126,9 @@ start.addEventListener("click",function() {
 // ];
 
 let qstIndex = 0;
+let qsts = [];
 
-randomize(qsts);
+// randomize(qsts);
 
 function displayQst(qstIndex){
   qst.innerHTML = qsts[qstIndex].qst;
@@ -225,3 +226,17 @@ function progressupdate(qstIndex){
 function randomize(arr) {
   return arr.sort(() => Math.random() - 0.5);// array sort does sort the strings from the small string to the bigger one if the parameter is positive and the opposite if the number is negative and math.rand returns a number between 0 and 1
 }
+
+var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              // console.log(this.responseText);
+              qsts=JSON.parse(this.responseText);
+              randomize(qsts);
+
+              // questionIndex = randoom(questions);
+              // console.log(questions);
+            }
+        };
+xmlhttp.open("GET", "/Quizizy-BackEnd/assets/scripts/scripts.php" , false);
+xmlhttp.send();
