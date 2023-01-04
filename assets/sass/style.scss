@@ -61,19 +61,12 @@ body{
 .progressbar {
     background-color: $amazon;
     height: 1.5rem;
-    // left: 10%;
     position: absolute;
-    // top: 35%;
-    // transform: translateY(-50%);
     transition: 0.4s ease;
     width: 0;
-    // z-index: -1;
     border-radius: $radius;
 }
 
-// .progresscounter{
-//     left: 0;
-// }
 .step{
     margin-top: 30px;
     align-items: center;

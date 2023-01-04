@@ -52,24 +52,24 @@
     </div>
 </div>
 <div id="quiz" >
-    <div class=" quiz row-lg h-100 d-flex align-items-center p-5 flex-wrap">
-        <div class="col-lg-1"></div>
-        <div class="col-lg-10">
+    <div class=" quiz row-lg row-md h-100 d-flex align-items-center p-5 flex-wrap">
+        <div class="col-lg-1 col-md-1"></div>
+        <div class="col-lg-10 col-md-10">
             <div class="qst d-flex justify-content-center" id="qst"></div>
             <div class="progressbar d-flex justify-content-center my-4" id="progressbar">
                 <div id="progresscounter" class="progresscounter"></div>
             </div>
-            <div class="choices row-lg h-100 d-flex align-items-center p-5 flex-wrap">
-                <div class="col-lg-3">
+            <div class="choices row-lg row-md h-100 d-flex align-items-center p-5 flex-wrap">
+                <div class="col-lg-3 col-md-6">
                     <button class="choice my-2" id="choice1" onclick="answerSubmit('1');"></button>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6">
                     <button class="choice my-2" id="choice2" onclick="answerSubmit('2');"></button>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6">
                     <button class="choice my-2" id="choice3" onclick="answerSubmit('3');"></button>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6">
                     <button class="choice my-2" id="choice4" onclick="answerSubmit('4');"></button>
                 </div>
             </div>
